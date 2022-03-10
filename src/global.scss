@@ -1,0 +1,42 @@
+//colors
+
+$maincolor: #303952;
+
+$title:white;
+
+$activeColor:#136182;
+
+$secondary:#00B89B;
+
+
+// responsive
+
+@mixin mobile{
+    @media only screen and (max-width:430px) {
+        @content
+    }
+};
+
+@mixin smallmobile{
+    @media(max-width:380px){
+        @content
+    }
+};
+
+@mixin tablet{
+    @media (max-width:1200px) and(min-width:430px){
+        @content
+    }
+};
+
+@mixin smallscreen{
+    @media (max-width:1200px) and (min-width:900){
+        @content
+    }
+};
+
+@mixin widescreen{
+    @media(max-width:2560px){
+        @content
+    }
+}
