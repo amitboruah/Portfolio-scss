@@ -1,0 +1,138 @@
+@import "../../global.scss";
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      margin-top: 40px;
+      height: 80%;
+
+      @include mobile {
+        margin-top: 10px;
+      }
+
+      @include tablet {
+        height: 55%;
+        margin-top: 100px;
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      width: 100%;
+      flex: 2;
+    }
+
+    @include smallmobile {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    form {
+      height: 70%;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // justify-content: space-around;
+      margin-top: 20px;
+
+      input {
+        width: 350px;
+        height: 40px;
+        font-size: 14px;
+        padding: 0px 10px;
+
+        @include mobile {
+          width: 250px;
+          height: 30px;
+        }
+
+        @include smallmobile {
+          width: 200px;
+        }
+
+        @include tablet {
+          width: 85%;
+        }
+      
+        @include smallscreen {
+          width: 300px;
+        }
+
+
+      }
+
+      textarea {
+        width: 350px;
+        height: 250px;
+        font-size: 14px;
+        padding: 10px 10px;
+        margin-top: 20px;
+
+        @include mobile {
+          width: 250px;
+          height: 100px;
+        }
+
+        @include smallmobile {
+          width: 200px;
+        }
+
+        @include tablet {
+          width: 85%;
+        }
+
+        @include smallscreen {
+          width: 300px;
+        }
+      }
+
+      #submit {
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 20px;
+        color: black;
+        background-color: $secondary;
+        border-radius: 10px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+
+        @include smallmobile {
+          width: 90px;
+          font-size: 12px;
+        }
+      }
+
+      span {
+        color: green;
+        font-weight: 500;
+
+        @include smallmobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../global.scss";
+
+.navbar {
+  width: 100vw;
+  height: 70px;
+  background-color: $maincolor;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+
+  .wrapper {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      font-size: 2rem;
+      color: $title;
+      font-weight: bold;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      margin-right: 40px;
+      text-decoration: none;
+    }
+    .containerItem {
+      display: flex;
+      align-items: center;
+
+      @include mobile{
+        display: none;
+      }
+    }
+    .icon {
+      color: white;
+      margin-right: 5px;
+      font-size: 19px;
+    }
+    span {
+      color: white;
+    }
+  }
+
+  .right {
+    .hamburger {
+      width: 29px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    span {
+      width: 100%;
+      height: 4px;
+      background-color: $title;
+      transform-origin: left;
+      transition: all 1.5s ease;
+    }
+  }
+  &.active {
+    background-color: $activeColor;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+        //   background-color: blueviolet;
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+
+        }
+      }
+    }
+  }
+}
